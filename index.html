@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejtvényjáték</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Titkosított Rejtvényjáték</h1>
+        <p>Válaszolj a következő találós kérdésre, hogy megtudd az eltolás mértékét, majd használd az eltolást a titkosított üzenet dekódolására!</p>
+        
+        <div class="riddle">
+            <h2>Találós kérdés:</h2>
+            <p>Van egy kerek testem, de még sincsen lábam. Ha megmozdítasz, messzire gurulok. Mi vagyok én?</p>
+            <input type="text" id="riddleAnswer" placeholder="Írd be a választ..." />
+            <button onclick="checkRiddle()">Ellenőrzés</button>
+        </div>
+
+        <div id="caesarCipherSection" style="display: none;">
+            <h2>Titkosított Üzenet:</h2>
+            <p>Íme a titkosított üzenet: <span class="cipher-text">Dro aesmu lbyg.</span></p> <!-- Titkos szöveg: "The quick brown" -->
+            <p>Használd az eltolás értékét a megfejtéshez.</p>
+            <input type="text" id="cipherAnswer" placeholder="Írd be a dekódolt üzenetet..." />
+            <button onclick="checkCipher()">Ellenőrzés</button>
+        </div>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
